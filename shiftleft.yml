@@ -28,8 +28,8 @@ jobs:
       # Runs shiftleft source code scan on demo-app repo
       - name: Run ShiftLeft Source Code Scan
         env: 
-          CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
-          CHKP_CLOUDGUARD_SECRET: ${{ secrets.CHKP_CLOUDGUARD_SECRET }}
+          CHKP_CLOUDGUARD_ID: cf8eed92-abaf-48ad-94e8-3a8668d5c2ea
+          CHKP_CLOUDGUARD_SECRET: jju394fcckup44b1c7q8g6qa
         run: |
           chmod +x ./shiftleft
           git clone https://github.com/chkp-rolandop/demo-app
@@ -41,8 +41,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build Container Image
         env: 
-          CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
-          CHKP_CLOUDGUARD_SECRET: ${{ secrets.CHKP_CLOUDGUARD_SECRET }}
+          CHKP_CLOUDGUARD_ID: cf8eed92-abaf-48ad-94e8-3a8668d5c2ea
+          CHKP_CLOUDGUARD_SECRET: jju394fcckup44b1c7q8g6qa
         run: |
           git clone https://github.com/chkp-rolandop/demo-app
           docker build -t rolandopcp/myapp ./demo-app
@@ -56,8 +56,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Check Terraform
         env:
-          CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
-          CHKP_CLOUDGUARD_SECRET: ${{secrets.CHKP_CLOUDGUARD_SECRET }}
+          CHKP_CLOUDGUARD_ID: cf8eed92-abaf-48ad-94e8-3a8668d5c2ea
+          CHKP_CLOUDGUARD_SECRET: jju394fcckup44b1c7q8g6qa
         run: |
           git clone https://github.com/chkp-rolandop/demo-app
           chmod +x ./shiftleft
